@@ -1,0 +1,9 @@
+# directories
+.idea
+.pytest_cache
+tmp
+venv
+**/__pycache__
+
+# files
+.coverage

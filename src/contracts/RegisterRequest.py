@@ -3,6 +3,9 @@ from src.contracts.AbstractRequest import AbstractRequest
 
 
 class RegisterRequest(AbstractRequest):
+    """
+    Contract for the Register endpoint when used with a request.
+    """
     def __init__(self):
         super().__init__()
         self.__email = None
