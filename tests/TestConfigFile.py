@@ -1,5 +1,5 @@
 import pytest
-from src.ConfigFile import ConfigFile
+from src.ConfigFile import ConfigFile, ConfigFileError
 
 
 class TestConfigFile(object):
@@ -17,6 +17,13 @@ class TestConfigFile(object):
         config = ConfigFile(file_name="test-config.yaml")
 
         assert len(config.config) > 0
+
+    def test_load_yaml_config_file_with_bogus_yaml_file_expect_exception(self):
+        # As a developer, I want my tests to load a bogus configuration file
+        with pytest.raises(ConfigFileError) as e:
+            ConfigFile(file_name="test-config-bogus.yaml")
+
+        assert str(e.value) == "YAML format if wrong: test-config-bogus.yaml"
 
     def test_load_yaml_config_file_with_bad_name_expect_fail(self):
         # As a developer, I want my tests to raise an exception if test suite configuration file isn't found

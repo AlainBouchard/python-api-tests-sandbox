@@ -2,6 +2,9 @@ from src.contracts.AbstractResponse import AbstractResponse
 
 
 class UsersIdResponse(AbstractResponse):
+    """
+    Contract for the UsersId (Single User) endpoint.
+    """
     def __init__(self):
         super().__init__()
         self.__data = None

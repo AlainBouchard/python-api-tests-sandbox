@@ -2,6 +2,9 @@ from src.contracts.AbstractResponse import AbstractResponse
 
 
 class UsersResponse(AbstractResponse):
+    """
+    Contract for the Users (Users List) endpoint.
+    """
     def __init__(self):
         super().__init__()
         self.__page = None

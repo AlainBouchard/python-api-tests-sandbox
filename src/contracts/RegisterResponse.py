@@ -3,6 +3,9 @@ from src.contracts.AbstractResponse import AbstractResponse
 
 
 class RegisterResponse(AbstractResponse):
+    """
+    Contract for the Register endpoint when used with a response.
+    """
     def __init__(self):
         super().__init__()
         self.__id = None
