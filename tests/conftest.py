@@ -3,6 +3,6 @@ import logging
 
 
 @pytest.fixture(scope="session", autouse=True)
-def set_logging() -> None:
-    print("###################")
-    logging.info("set_logging on conftest.py")
+def setup_session() -> None:
+    # Location to add the session setup, called once, before all tests.
+    logging.info("setup session in conftest.py")
