@@ -21,7 +21,7 @@ class AbstractResponse(ABC):
             args = json.loads(response.text)
             self.update(**args)
         except TypeError as e:
-            logging.info(f"Could not load update the data: {e}")
+            logging.info(f"Could not load data: {e}")
         finally:
             self._response = response
 

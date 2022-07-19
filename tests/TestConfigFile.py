@@ -8,7 +8,6 @@ class TestConfigFile(object):
     """
     def test_load_yaml_config_file_with_default_file_name_expect_success(self):
         # As a developer, I want my tests to load the default test suite configuration file
-
         config = ConfigFile()
 
         assert len(config.config) > 0
