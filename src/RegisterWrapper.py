@@ -1,7 +1,6 @@
 import json
 import requests
 from src.ConfigFile import ConfigFile
-from src.contracts.RegisterRequest import RegisterRequest
 from src.contracts.RegisterResponse import RegisterResponse
 
 
