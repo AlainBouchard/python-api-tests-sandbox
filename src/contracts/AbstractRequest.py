@@ -1,10 +1,8 @@
 from abc import ABC, abstractmethod
-import logging
 from faker import Faker
 
 
 Faker.seed(0)
-logging.error("############### bang bang! #################")
 
 
 class AbstractRequest(ABC):
