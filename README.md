@@ -21,7 +21,7 @@ Principles and concepts:
 
 ## Who?
 
-This project is mainly or my own usage but anybody who would like an example about using python to test APIs. This testing suite could be used to test either the application running in a `docker-compose` environment (narrow integration testing) or in a `cluster` (broad integration testing).
+This project is mainly for my own usage but anybody who would like an example about using python to test APIs. This testing suite could be used to test either the application running in a `docker-compose` environment (narrow integration testing) or in a `cluster` (broad integration testing).
 
 ## How?
 
@@ -35,7 +35,8 @@ py -3.9 -m pip install tox
 py -3.9 -m tox --recreate --
 ```
 
-If python 3.9 isn't installed on the local, the docker can be used:
+If python 3.9 isn't installed on the local, then docker can be used:
+
 ```sh
 docker build -t python-api-tests-sandbox:local .
 docker run -t python-api-tests-sandbox:local
